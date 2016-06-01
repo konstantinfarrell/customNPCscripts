@@ -26,8 +26,16 @@ if(!world.hasStoredData("states")){
     world.setStoredData("states", states);
 }
 
-// Initialize NPC's to "thinking"
+// Initialize NPCs to "thinking"
 npc.setTempData("state", states[0]);
+
+// Initialize NPC's main attributes to null
+npc.setTempData("target", null);
+npc.setTempData("current_task", null);
+npc.setTempData("current_goal", null);
+npc.setTempData("current_mine", null);
+npc.setTempData("structure_of_focus", null);
+
 
 // It would REALLY suck to have to type "minecraft:"
 // for every item declaration.
